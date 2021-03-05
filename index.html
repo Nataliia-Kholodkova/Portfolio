@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/nav.js" defer></script>
+  </head>
+  <body>
+    <svg version="1.1" style="display: none">
+      <symbol id="mail" viewBox="0 0 17 13">
+        <path
+          d="M15.6,11.6H1.4V5.8H0V13H17V5.8H15.6ZM0,0V2.3L8.5,9.4,17,2.3V0ZM15.6,1.6,8.5,7.5,1.4,1.6V1.4H15.6Z"
+          transform="translate(0 0)"
+        />
+      </symbol>
+      <symbol id="phone" viewBox="0 0 19.96 19.93">
+        <path
+          d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1.9.9,3.1-3.1a.75.75,0,0,0,0-.9L16.7,6.5l-.9.9Z"
+          transform="translate(0.01 0.01)"
+        />
+        <path
+          d="M8.1,19.4V13.2a.65.65,0,0,0-.6-.6H3.1a1.22,1.22,0,0,0,1.2,1.2H6.8v5H3.1a1.79,1.79,0,0,1-1.9-1.7V3.1A1.77,1.77,0,0,1,2.9,1.3H6.8v5H4.4A1.22,1.22,0,0,0,3.2,7.5H7.6a.65.65,0,0,0,.6-.6V.6A.86.86,0,0,0,7.5,0H3.1A3,3,0,0,0,0,2.9V16.8a2.89,2.89,0,0,0,2.9,3.1H7.5A.5.5,0,0,0,8.1,19.4Z"
+          transform="translate(0.01 0.01)"
+        />
+      </symbol>
+      <symbol id="git" viewBox="0 0 438.549 438.549">
+        <g>
+          <path
+            d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
+          c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
+          c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
+          c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
+          c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559
+          c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559
+          c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997
+          c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851
+          c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136
+          c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41
+          c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126
+          c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817
+          c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994
+          c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849
+          c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24
+          c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979
+          c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146
+          c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
+          c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
+          C438.536,184.851,428.728,148.168,409.132,114.573z"
+          ></path>
+        </g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+      </symbol>
+      <symbol id="fb" viewBox="0 0 96.124 96.123">
+        <g>
+          <path
+            d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+          ></path>
+        </g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+      </symbol>
+      <symbol id="telegram" viewBox="0 -24 512 512">
+        <path
+          d="m512 0-512 217.628906 134.222656 53.269532 47.78125 179.605468 87.980469-85.246094 143.132813 98.855469zm-323.023438 293.921875-6.972656 156.582031-18.035156-184.34375 348.03125-266.160156zm0 0"
+        ></path>
+        <path
+          class="path2"
+          d="m512 0-323.023438 293.921875-6.972656 156.582031 87.980469-85.246094 143.132813 98.855469zm0 0"
+        ></path>
+      </symbol>
+    </svg>
+    <header class="header">
+      <nav class="nav">
+        <button class="btn btn-nav btn-nav__open">
+          <span class="line"></span>
+        </button>
+        <ul class="list nav-list">
+          <li class="item nav-item">
+            <a href="#about" class="link nav-link">About</a>
+          </li>
+          <li class="item nav-item">
+            <a href="#instruments" class="link nav-link">Knowledge</a>
+          </li>
+          <li class="item nav-item">
+            <a href="#portfolio" class="link nav-link">Portfolio</a>
+          </li>
+          <li class="item nav-item">
+            <a href="#contacts" class="link nav-link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="section section-header">
+        <div class="wrapper wrapper-header">
+          <h1 class="title title-header">
+            The way to the dream is not always easy and short, but always
+            interesting and exciting
+          </h1>
+        </div>
+      </section>
+      <section id="about" class="section section-about">
+        <div class="wrapper wrapper-about">
+          <img
+            class="img img-about"
+            srcset="img/photo.jpg 1x, img/photo@2x.jpg 2x"
+            src="img/photo.jpg"
+            alt="My photo"
+          />
+          <p class="text text-header">
+            I am a self-taught developer and have no commercial experience yet.
+            However, my passion for coding, learning, perseverance and
+            responsibility gives me confidence that I can succeed in my dream
+            area - the frontend.
+          </p>
+        </div>
+      </section>
+      <section
+        id="instruments"
+        class="section section-bg instruments-section__bg"
+      >
+        <h2 class="title title-section title-pink">
+          I have an experience with:
+        </h2>
+      </section>
+      <section class="section instruments-section">
+        <div class="wrapper">
+          <ul class="list list-features">
+            <li class="list-item item-feature">
+              <img
+                src="img/html5.svg"
+                alt=""
+                class="img img-feature img-feature__html"
+                width="50px"
+              />
+            </li>
+            <li class="list-item item-feature">
+              <img
+                src="img/css.svg"
+                alt=""
+                class="img img-feature img-feature__css"
+                width="50px"
+              />
+            </li>
+            <li class="list-item item-feature">
+              <img
+                src="img/js.svg"
+                alt=""
+                class="img img-feature img-feature__js"
+                width="50px"
+              />
+            </li>
+            <li class="list-item item-feature">
+              <img
+                src="img/less.svg"
+                alt=""
+                class="img img-feature img-feature__less"
+                width="70px"
+              />
+            </li>
+            <li class="list-item item-feature">
+              <img
+                src="img/sass.svg"
+                alt=""
+                class="img img-feature img-feature__sass"
+                width="68px"
+              />
+            </li>
+            <li class="list-item item-feature">
+              <img
+                src="img/git.svg"
+                alt=""
+                class="img img-feature img-feature__git"
+                width="68px"
+              />
+            </li>
+            <li class="list-item item-feature">
+              <img
+                src="img/gulp.svg"
+                alt=""
+                class="img img-feature img-feature__gulp"
+                width="60px"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="portfolio" class="section section-bg portfolio-section__bg">
+        <h2 class="title title-section title-pink">Portfolio</h2>
+      </section>
+      <section class="section portfolio-section">
+        <div class="wrapper wrapper-portfolio">
+          <div class="item-portfolio item-portfolio__sedona">
+            <figure class="portfolio-image">
+              <picture>
+                <source
+                  srcset="img/sedona-mobile.jpg 1x, img/sedona-mobile@2x.jpg 2x"
+                  media="(max-width: 479px)"
+                />
+                <source
+                  srcset="img/sedona-tablet.jpg 1x, img/sedona-tablet@2x.jpg 2x"
+                  media="(min-width: 480px) and (max-width: 959px)"
+                />
+                <img
+                  src="img/sedona-desktop.jpg"
+                  srcset="img/sedona-desktop@2x.jpg 2x"
+                  alt="Preview for Sedona"
+                  class="img portfolio-img portfolio-img__thumbnail"
+                />
+              </picture>
+              <figcaption class="figcaption">
+                <ul class="list portfolio-links">
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://github.com/UA-girl/Sedona"
+                      target="_blanck"
+                      >Git Repo</a
+                    >
+                  </li>
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://ua-girl.github.io/Sedona/build/"
+                      target="_blanck"
+                      >Demo</a
+                    >
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="portfolio-description">
+              <ul class="list tech-list">
+                <li class="list-item item-tech">HTML</li>
+                <li class="list-item item-tech">CSS</li>
+                <li class="list-item item-tech">LESS</li>
+                <li class="list-item item-tech">Gulp</li>
+                <li class="list-item item-tech">JavaScript</li>
+                <li class="list-item item-tech">PixelPerfect</li>
+                <li class="list-item item-tech">Photoshop</li>
+                <li class="list-item item-tech">Adaptive</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-portfolio item-portfolio__energy">
+            <figure class="portfolio-image">
+              <picture>
+                <source
+                  srcset="img/energy-mobile.jpg 1x, img/energy-mobile@2x.jpg 2x"
+                  media="(max-width: 479px)"
+                />
+                <source
+                  srcset="img/energy-tablet.jpg 1x, img/energy-tablet@2x.jpg 2x"
+                  media="(min-width: 480px) and (max-width: 959px)"
+                />
+                <img
+                  src="img/energy-desktop.jpg"
+                  srcset="img/energy-desktop@2x.jpg 2x"
+                  alt="Preview for Cat Energy"
+                  class="img portfolio-img portfolio-img__thumbnail"
+                />
+              </picture>
+              <figcaption class="figcaption">
+                <ul class="list portfolio-links">
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://github.com/UA-girl/CatEnergy"
+                      target="_blanck"
+                      >Git Repo</a
+                    >
+                  </li>
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://ua-girl.github.io/CatEnergy/"
+                      target="_blanck"
+                      >Demo</a
+                    >
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="portfolio-description">
+              <ul class="list tech-list">
+                <li class="list-item item-tech">HTML</li>
+                <li class="list-item item-tech">CSS</li>
+                <li class="list-item item-tech">LESS</li>
+                <li class="list-item item-tech">Gulp</li>
+                <li class="list-item item-tech">JavaScript</li>
+                <li class="list-item item-tech">PixelPerfect</li>
+                <li class="list-item item-tech">Photoshop</li>
+                <li class="list-item item-tech">Adaptive</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-portfolio item-portfolio__barbershop">
+            <figure class="portfolio-image">
+              <picture>
+                <source
+                  srcset="
+                    img/barbershop-mobile.jpg    1x,
+                    img/barbershop-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 479px)"
+                />
+                <source
+                  srcset="
+                    img/barbershop-tablet.jpg    1x,
+                    img/barbershop-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 480px) and (max-width: 959px)"
+                />
+                <img
+                  src="img/barbershop-desktop.jpg"
+                  srcset="img/barbershop-desktop@2x.jpg 2x"
+                  alt="Preview for BarberShop"
+                  class="img portfolio-img portfolio-img__thumbnail"
+                />
+              </picture>
+              <figcaption class="figcaption">
+                <ul class="list portfolio-links">
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://github.com/UA-girl/Barbershop/"
+                      target="_blank"
+                      >Git Repo</a
+                    >
+                  </li>
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://ua-girl.github.io/Barbershop/app/"
+                      target="_blank"
+                      >Demo</a
+                    >
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="portfolio-description">
+              <ul class="list tech-list">
+                <li class="list-item item-tech">HTML</li>
+                <li class="list-item item-tech">CSS</li>
+                <li class="list-item item-tech">LESS</li>
+                <li class="list-item item-tech">Gulp</li>
+                <li class="list-item item-tech">JavaScript</li>
+                <li class="list-item item-tech">PixelPerfect</li>
+                <li class="list-item item-tech">Photoshop</li>
+                <li class="list-item item-tech">Adaptive</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-portfolio item-portfolio__mishka">
+            <figure class="portfolio-image">
+              <picture>
+                <source
+                  srcset="img/mishka-mobile.jpg 1x, img/mishka-mobile@2x.jpg 2x"
+                  media="(max-width: 479px)"
+                />
+                <source
+                  srcset="img/mishka-tablet.jpg 1x, img/mishka-tablet@2x.jpg 2x"
+                  media="(min-width: 480px) and (max-width: 959px)"
+                />
+                <img
+                  src="img/mishka-desktop.jpg"
+                  srcset="img/mishka-desktop@2x.jpg 2x"
+                  alt="Preview for Mishka"
+                  class="img portfolio-img portfolio-img__thumbnail"
+                />
+              </picture>
+              <figcaption class="figcaption">
+                <ul class="list portfolio-links">
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://github.com/UA-girl/Mishka"
+                      target="_blanck"
+                      >Git Repo</a
+                    >
+                  </li>
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://ua-girl.github.io/Mishka/app/"
+                      target="_blanck"
+                      >Demo</a
+                    >
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="portfolio-description">
+              <ul class="list tech-list">
+                <li class="list-item item-tech">HTML</li>
+                <li class="list-item item-tech">CSS</li>
+                <li class="list-item item-tech">SASS</li>
+                <li class="list-item item-tech">Gulp</li>
+                <li class="list-item item-tech">JavaScript</li>
+                <li class="list-item item-tech">PixelPerfect</li>
+                <li class="list-item item-tech">Photoshop</li>
+                <li class="list-item item-tech">Adaptive</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-portfolio item-portfolio__glacy">
+            <figure class="portfolio-image">
+              <picture>
+                <source
+                  srcset="
+                    img/glacy-900-mobile.jpg    1x,
+                    img/glacy-900-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 479px)"
+                />
+                <source
+                  srcset="img/glacy-900.jpg 1x, img/glacy-900@2x.jpg 2x"
+                  media="(min-width: 480px) and (max-width: 959px)"
+                />
+                <img
+                  src="img/glacy-1200.jpg"
+                  srcset="img/glacy-1200@2x.jpg 2x"
+                  alt="Preview for Glacy"
+                  class="img portfolio-img portfolio-img__thumbnail"
+                />
+              </picture>
+              <figcaption class="figcaption">
+                <ul class="list portfolio-links">
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://github.com/UA-girl/Glacy"
+                      target="_blank"
+                      >Git Repo</a
+                    >
+                  </li>
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://ua-girl.github.io/Glacy"
+                      target="_blank"
+                      >Demo</a
+                    >
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="portfolio-description">
+              <ul class="list tech-list">
+                <li class="list-item item-tech">HTML</li>
+                <li class="list-item item-tech">CSS</li>
+                <li class="list-item item-tech">JavaScript</li>
+                <li class="list-item item-tech">Static</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-portfolio item-portfolio__friends">
+            <figure class="portfolio-image">
+              <picture>
+                <source
+                  srcset="
+                    img/friends-mobile.jpg    1x,
+                    img/friends-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 479px)"
+                />
+                <source
+                  srcset="
+                    img/friends-tablet.jpg    1x,
+                    img/friends-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 480px) and (max-width: 959px)"
+                />
+                <img
+                  src="img/friends-desktop.jpg"
+                  srcset="img/friends-desktop@2x.jpg 2x"
+                  alt="Preview for Friends App"
+                  class="img portfolio-img portfolio-img__thumbnail"
+                />
+              </picture>
+              <figcaption class="figcaption">
+                <ul class="list portfolio-links">
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://github.com/UA-girl/FriendsApp"
+                      target="_blank"
+                      >Git Repo</a
+                    >
+                  </li>
+                  <li class="list-item portfolio-list__item">
+                    <a
+                      class="link portfolio-link"
+                      href="https://ua-girl.github.io/FriendsApp/"
+                      target="_blank"
+                      >Demo</a
+                    >
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="portfolio-description">
+              <ul class="list tech-list">
+                <li class="list-item item-tech">HTML</li>
+                <li class="list-item item-tech">CSS</li>
+                <li class="list-item item-tech">JavaScript</li>
+                <li class="list-item item-tech">Adaptive, acync</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section last-section section-bg">
+        <h2 class="title title-section">
+          More you can find on my
+          <a href="#" class="link git-link">GitHub</a> page.
+        </h2>
+      </section>
+    </main>
+    <footer id="contacts" class="footer">
+      <div class="wrapper wrapper-footer">
+        <ul class="list list-contacts">
+          <li class="list-item item-contact">
+            <a
+              href="tel:380990243082"
+              class="link item-link item-link__contact"
+            >
+              <svg class="item-link__svg phone-svg" width="50" height="50">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#phone"
+                ></use>
+              </svg>
+              <span class="text link-text">+38 099 024 30 82</span>
+            </a>
+          </li>
+          <li class="list-item item-contact">
+            <a
+              href="mailto:n_kholodkova@ukr.net"
+              class="link item-link item-link__contact"
+            >
+              <svg class="item-link__svg mail-svg" width="50" height="50">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#mail"
+                ></use>
+              </svg>
+              <span class="text link-text">n_kholodkova@ukr.net</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="list list-media">
+          <li class="list-item item-media">
+            <a
+              href="https://github.com/UA-girl/"
+              class="link item-link item-link__media"
+              aria-label="GitHub Profile"
+              target="_blank"
+            >
+              <svg class="item-link__svg git-svg" width="50" height="50">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#git"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list-item item-media">
+            <a
+              href="https://www.facebook.com/profile.php?id=100010167106827"
+              class="link item-link item-link__media"
+              aria-label="Facebook Profile"
+              target="_blank"
+            >
+              <svg class="item-link__svg fb-svg" width="50" height="50">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#fb"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list-item item-media">
+            <a
+              href="https://t.me/Nataliya_Kholodkova"
+              class="link item-link item-link__media"
+              aria-label="Telegram Profile"
+              target="_blank"
+            >
+              <svg class="item-link__svg telegram-svg" width="50" height="50">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#telegram"
+                ></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

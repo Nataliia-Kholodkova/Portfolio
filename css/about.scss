@@ -1,0 +1,149 @@
+@import "_variables";
+@import "_mixins";
+
+.section-header {
+  position: relative;
+  background-color: transparent;
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 266px;
+    top: 0;
+    left: 0;
+    content: "";
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 467px auto;
+    background-position: center top;
+    background-attachment: fixed;
+    z-index: -1;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../img/bg@2x.jpg);
+    }
+  }
+}
+
+.wrapper-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  height: 266px;
+}
+
+.title-header {
+  font-size: 24px;
+}
+
+.section-about {
+  background-color: $bgColor;
+}
+
+.wrapper-about {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-about {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-header {
+  @include text(16px, 1.5, 400);
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .section-header::after {
+    background-size: contain;
+  }
+
+  .wrapper-header {
+    height: 265px;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .title-header {
+    text-align: left;
+    width: 75%;
+  }
+
+  .wrapper-about {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+  }
+
+  .img-about {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .text-header {
+    width: 50%;
+    padding: 0 20px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 678px) {
+  .section-header::after {
+    height: 288px;
+    background-size: cover;
+  }
+
+  .wrapper-header {
+    height: 288px;
+    padding-bottom: 30px;
+  }
+
+  .title-header {
+    font-size: 30px;
+  }
+
+  .img-about {
+    width: 35%;
+  }
+
+  .text-header {
+    width: 60%;
+    font-size: 18px;
+    padding: 0 20px 0 40px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .wrapper-header {
+    padding: 55px;
+  }
+
+  .img-about {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-header::after {
+    height: 356px;
+  }
+
+  .wrapper-header {
+    height: 356px;
+  }
+
+  .title-header {
+    font-size: 40px;
+  }
+
+  .text-header {
+    font-size: 22px;
+  }
+}

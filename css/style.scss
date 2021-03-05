@@ -1,0 +1,148 @@
+@import "_variables";
+@import "_mixins";
+
+@font-face {
+  font-family: "RocknRollOneregular";
+  src: url("../fonts/rocknrollone-regular-webfont.woff2") format("woff2"),
+    url("../fonts/rocknrollone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url("../fonts/ptsansnarrow-bold-webfont.woff2") format("woff2"),
+    url("../fonts/ptsansnarrow-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url("../fonts/ptsansnarrow-regular-webfont.woff2") format("woff2"),
+    url("../fonts/ptsansnarrow-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  @include reset();
+  font-family: PTSans, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: $mainFontColor;
+  background-color: $bgColor;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section,
+.header,
+.nav,
+.wrapper,
+.footer,
+.main {
+  @include reset();
+  width: 100%;
+}
+
+.section-bg {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  @include reset();
+  width: 100%;
+  padding: 0 30px;
+}
+
+.link {
+  @include reset();
+  display: block;
+  color: $mainFontColor;
+  text-decoration: none;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+.btn {
+  @include reset();
+  border: none;
+  background: none;
+  display: block;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+.list,
+.list-item {
+  @include reset();
+  list-style: none;
+}
+
+.title {
+  @include reset();
+  font-family: RocknRollOneregular, Arial, Helvetica, sans-serif;
+  @include title(20px, 1.5, 700);
+  color: antiquewhite;
+  text-align: center;
+  text-shadow: 2px 2px 1px rgba($mainFontColor, 0.5),
+    -1px 0 1px rgba($mainFontColor, 0.3);
+}
+
+.title-pink {
+  color: $redDarkColor;
+  text-shadow: 2px 2px 1px rgba($bgColor, 0.5), -1px 0 1px rgba($bgColor, 0.3);
+}
+
+.text {
+  @include reset();
+}
+
+@media screen and (min-width: 480px) {
+  .wrapper {
+    width: 460px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 678px) {
+  .wrapper {
+    width: 658px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .wrapper {
+    width: 940px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1170px;
+  }
+}
+
+@import "nav";
+@import "about";
+@import "features";
+@import "portfolio";
+@import "footer";

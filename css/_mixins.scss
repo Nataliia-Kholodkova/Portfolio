@@ -1,0 +1,16 @@
+@mixin text($font-size, $line-height, $font-weight) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
+
+@mixin title($font-size, $line-height, $font-weight) {
+    @include text($font-size, $line-height, $font-weight);
+    text-transform: uppercase;
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
